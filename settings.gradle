@@ -1,2 +1,2 @@
-include ':app', ':data', ':api'
+include ':app', ':data', ':api', ':service'
 rootProject.name='blog'

@@ -2,22 +2,15 @@ package br.com.sigga.data.dao
 
 import androidx.room.*
 
-
 interface GenericDao<E> {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertEntity(entity: E)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    fun insert(entity: E): Long
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(vararg entity: E)
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    fun update(entity: E)
 
-    @Update
-    fun updateEntity(entity: E)
-
-    @Update
-    fun updateAll(vararg entity: E)
-
-    @Delete
-    fun deleteEntity(entity: E)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    fun insertAll(entities: List<E>)
 
 }

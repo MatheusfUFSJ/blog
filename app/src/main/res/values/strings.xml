@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">blog</string>
+    <string name="app_name">Blog</string>
+    <string name="main_menu_logout">Sair</string>
+
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="error_text">Ocorreu um erro!</string>
+    <string name="post_details_text">Descrição</string>
+    <string name="post_name_text">Titulo</string>
+    <string name="comments">Comentários</string>
 </resources>

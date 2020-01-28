@@ -3,8 +3,8 @@ package br.com.sigga.data.model
 import androidx.room.Entity
 import java.io.Serializable
 
-@Entity
-data class Address (
+@Entity(tableName = "user_address", primaryKeys = arrayOf("userId", "id"))
+data class UserAddress (
     var id: Long = 0L,
     var userId: Long = 0L,
     var street: String = "",

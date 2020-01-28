@@ -1,4 +1,4 @@
-package br.com.sigga.data
+package br.com.sigga.data.di
 
 import android.content.Context
 import androidx.room.Room

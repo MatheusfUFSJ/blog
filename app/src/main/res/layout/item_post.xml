@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="br.com.sigga.blog.viewmodels.items.PostItemViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/post_item_margin_top"
+        android:layout_marginTop="@dimen/post_item_margin_left"
+        android:layout_marginEnd="@dimen/post_item_margin_top"
+        android:layout_marginBottom="@dimen/post_item_margin_left"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:id="@+id/view_container_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/post_item_container_padding"
+            android:paddingBottom="@dimen/post_item_container_padding">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="@dimen/post_item_data_container_margin"
+                    android:layout_marginEnd="@dimen/post_item_container_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        fontPath="fonts/Roboto-Bold.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.title}"
+                        android:textColor="#151431"
+                        android:textSize="@dimen/post_item_title_text" />
+
+                    <TextView
+                        fontPath="fonts/Roboto-LightItalic.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.body}"
+                        android:textColor="#9b9b9b"
+                        android:textSize="@dimen/post_item_subtitle_text" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

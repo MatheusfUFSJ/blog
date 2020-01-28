@@ -1,6 +1,8 @@
 package br.com.sigga.data.dao
 
-import br.com.sigga.data.model.Address
+import androidx.room.Dao
+import br.com.sigga.data.model.UserAddress
 
-interface AddressDao  : GenericDao<Address> {
+@Dao
+interface AddressDao : GenericDao<UserAddress> {
 }

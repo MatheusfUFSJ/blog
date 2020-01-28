@@ -1,16 +1,14 @@
 package br.com.sigga.data.model
 
 import androidx.room.Entity
-import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-@Entity
+@Entity(primaryKeys = arrayOf("userId", "id"))
 data class Post(
-    @PrimaryKey
+    @SerializedName("userId")
     var userId: Long = 0L,
-    @PrimaryKey
     var id: Long = 0L,
-    var name: String = "",
     var title: String = "",
     var body: String = ""
 ) : Serializable {

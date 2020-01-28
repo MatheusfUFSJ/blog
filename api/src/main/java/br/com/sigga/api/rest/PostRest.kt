@@ -11,5 +11,5 @@ interface PostRest {
     fun getPosts(): Observable<List<Post>>
 
     @GET("posts/{id}/comments")
-    fun getComments(@Path("id") id: String): Observable<List<Comment>>
+    fun getComments(@Path("id") id: Long): Observable<List<Comment>>
 }

@@ -1,6 +1,7 @@
 package br.com.sigga.data.model
 
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import java.io.Serializable
 
@@ -13,7 +14,8 @@ data class User(
     var email: String = "",
     var phone: String = "",
     var website: String = "",
-    var address: Address? = null
+    @Ignore
+    var address: UserAddress? = null
 ) : Serializable {
 
     companion object {

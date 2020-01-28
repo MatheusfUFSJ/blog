@@ -27,7 +27,7 @@ class PostApiService : AnkoLogger {
             })
     }
 
-    fun searchComments(id: String, callback: ApiView<Comment>) {
+    fun searchComments(id: Long, callback: ApiView<Comment>) {
         service.getComments(id)
             .observeOn(SchedulerUtils.observeOn())
             .subscribeOn(SchedulerUtils.subscribeOn())

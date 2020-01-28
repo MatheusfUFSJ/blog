@@ -4,11 +4,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
 
-@Entity
+@Entity(primaryKeys = arrayOf("albumId", "id"))
 data class Photo(
-    @PrimaryKey
     var albumId: Long = 0L,
-    @PrimaryKey
     var id: Long = 0L,
     var title: String = "",
     var url: String = "",

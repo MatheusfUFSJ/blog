@@ -2,10 +2,112 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="md_corner_radius">8dp</item>
+        <item name="md_font_title">@font/roboto_bold</item>
+        <item name="md_font_body">@font/roboto_regular</item>
+        <item name="md_font_button">@font/roboto_medium</item>
+        <item name="md_color_title">@color/colorPrimary</item>
+        <item name="md_color_content">@color/colorDialogContent</item>
+        <item name="android:itemBackground">@color/black</item>
+    </style>
+
+    <style name="AppTheme.Splash">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+        <item name="android:itemBackground">@color/black</item>
+    </style>
+
+    <style name="main_menu_item_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/main_menu_item_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="main_menu_item_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/main_menu_button_text_top</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/main_menu_button_text</item>
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+    </style>
+
+    <style name="main_menu_item_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="open_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingStart">@dimen/open_padding</item>
+        <item name="android:paddingTop">@dimen/open_padding_top</item>
+        <item name="android:paddingEnd">@dimen/open_padding</item>
+        <item name="android:paddingBottom">@dimen/open_padding_top</item>
+    </style>
+
+    <style name="details_title">
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#9b9b9b</item>
+        <item name="android:textSize">@dimen/details_basic_title_text</item>
+    </style>
+
+    <style name="details_title.middle">
+        <item name="android:layout_marginTop">@dimen/details_basic_title_top</item>
+    </style>
+
+    <style name="details_data">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#151431</item>
+        <item name="android:textSize">@dimen/details_basic_content_text</item>
+        <item name="fontPath">fonts/Roboto-Bold.ttf</item>
+    </style>
+
+    <style name="internal_action_toolbar_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/internal_action_toolbar_height</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="internal_action_button_close">
+        <item name="android:layout_width">@dimen/action_close_size</item>
+        <item name="android:layout_height">@dimen/action_close_size</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:padding">@dimen/action_close_padding</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/ic_modal_close</item>
+    </style>
+
+    <style name="internal_action_toolbar_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginEnd">@dimen/internal_action_back_width</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">@dimen/internal_action_title_text</item>
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
     </style>
 
 </resources>
