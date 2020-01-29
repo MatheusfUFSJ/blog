@@ -76,6 +76,24 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/view_album_menu"
+                    style="@style/main_menu_item_container">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/main_menu_button_image_height"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_action_camera_alt" />
+
+                    <TextView
+                        style="@style/main_menu_item_text"
+                        android:text="@string/main_menu_album" />
+
+                </LinearLayout>
+
+                <View style="@style/main_menu_item_divider" />
+
+                <LinearLayout
                     android:id="@+id/view_exit_menu"
                     style="@style/main_menu_item_container">
 

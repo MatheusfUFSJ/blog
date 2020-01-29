@@ -8,4 +8,6 @@
     <string name="post_details_text">Descrição</string>
     <string name="post_name_text">Titulo</string>
     <string name="comments">Comentários</string>
+    <string name="main_menu_photo">Fotos</string>
+    <string name="main_menu_album">Album</string>
 </resources>

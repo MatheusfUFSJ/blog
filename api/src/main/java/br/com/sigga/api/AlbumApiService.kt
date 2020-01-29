@@ -27,6 +27,18 @@ class AlbumApiService : AnkoLogger {
                 })
     }
 
+    fun searchPhotos(callback: ApiView<Photo>) {
+        service.getPhotos()
+            .observeOn(SchedulerUtils.observeOn())
+            .subscribeOn(SchedulerUtils.subscribeOn())
+            .subscribe({
+                callback.onSuccess(it)
+            }, { e ->
+                error(e.message, e)
+                callback.onError(e)
+            })
+    }
+
     fun searchPhotos(id: String, callback: ApiView<Photo>) {
         service.getPhotos(id)
             .observeOn(SchedulerUtils.observeOn())

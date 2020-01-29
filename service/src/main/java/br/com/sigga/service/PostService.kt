@@ -15,12 +15,7 @@ import org.koin.core.KoinComponent
 import org.koin.core.inject
 
 @SuppressLint("CheckResult")
-class PostService : KoinComponent, AnkoLogger {
-
-    companion object {
-        const val ERROR_INTERNET: String = "Verifique a sua conexão com a internet e tente novamente."
-        const val ERROR_DB: String = "Erro ao buscar do banco de dados."
-    }
+class PostService : BaseService(), KoinComponent, AnkoLogger {
 
     private val postApi: PostApiService by lazy { PostApiService() }
     private val postDao: PostDao by inject()

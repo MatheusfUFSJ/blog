@@ -8,6 +8,10 @@ import retrofit2.http.Path
 
 interface AlbumRest {
 
+
+    @GET("photos/")
+    fun getPhotos(): Observable<List<Photo>>
+
     @GET("albums/")
     fun getAlbums(): Observable<List<Album>>
 

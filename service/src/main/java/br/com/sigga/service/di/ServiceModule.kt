@@ -9,7 +9,6 @@ import org.koin.dsl.module
 val serviceModule = module {
     single { PostService() }
     single { AlbumService() }
-    single { UserService() }
     single { CommentService() }
 }
 

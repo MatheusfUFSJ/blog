@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProviders
 import br.com.sigga.blog.R
 import br.com.sigga.blog.databinding.ActivityMainBinding
 import br.com.sigga.blog.fragments.BaseFragment
+import br.com.sigga.blog.fragments.AlbumFragment
 import br.com.sigga.blog.fragments.PostFragment
 import br.com.sigga.blog.viewmodels.activities.MainViewModel
 
@@ -38,6 +39,7 @@ class MainActivity : BaseFragmentActivity() {
 
         binding.viewModel = viewModel
 
+
         binding.viewExitMenu.setOnClickListener {
             finish()
         }
@@ -47,6 +49,11 @@ class MainActivity : BaseFragmentActivity() {
         )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
+        binding.viewAlbumMenu.setOnClickListener {
+            binding.drawerLayout.closeDrawers()
+            openFragment(BaseFragment.newInstance(AlbumFragment::class, this))
+        }
 
         openFragment(BaseFragment.newInstance(PostFragment::class, this))
     }
